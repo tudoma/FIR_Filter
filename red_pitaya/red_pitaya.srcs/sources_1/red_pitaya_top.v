@@ -202,6 +202,11 @@ wire  [ 12-1: 0] adc_aux     ;
 wire  [ 12-1: 0] adc_ddr     ;
 
 
+wire  [ 14-1: 0] data_adc_a  ;  // Datenbus für ADC A
+wire  [ 14-1: 0] data_adc_b  ;  // Datenbus für ADC B
+
+wire  [ 14-1: 0] data_dac_a  ;  // Datenbus für DAC A
+wire  [ 14-1: 0] data_dac_b  ;  // Datenbus für DAC B
 
 red_pitaya_analog i_analog
 (
@@ -226,14 +231,14 @@ red_pitaya_analog i_analog
   .vinn_i             (  vinn_i           ),  // voltages n
 
   // user interface
-  .adc_dat_a_o        (  adc_a            ),  // ADC CH1
-  .adc_dat_b_o        (  adc_b            ),  // ADC CH2
+  .adc_dat_a_o        (  data_adc_a       ),  // adc_a            ),  // ADC CH1
+  .adc_dat_b_o        (  data_adc_b       ),  // adc_b            ),  // ADC CH2
   .adc_clk_o          (  adc_clk          ),  // ADC received clock
   .adc_rst_i          (  adc_rstn         ),  // reset - active low
   .ser_clk_o          (  ser_clk          ),  // fast serial clock
 
-  .dac_dat_a_i        (  dac_a            ),  // DAC CH1
-  .dac_dat_b_i        (  dac_b            ),  // DAC CH2
+  .dac_dat_a_i        (  data_dac_a       ),  //dac_a            ),  // DAC CH1
+  .dac_dat_b_i        (  data_dac_b       ),  //dac_b            ),  // DAC CH2
 
   .adc_slx_a_o        (  adc_slx_a        ),  // slow ADC CH1
   .adc_slx_b_o        (  adc_slx_b        ),  // slow ADC CH2
@@ -434,6 +439,15 @@ red_pitaya_daisy i_daisy
   .ser_clk_i       (  ser_clk                    )   // high speed serial
 );
 
+////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                    //
+//      Initialization MATLAB HDL CODER                                               //      
+//                                                                                    //
+//      IN1:  data_adc_a     IN2:    data_adc_b              line 234/235             //
+//                                                                                    //              
+//      OUT1: data_dac_a     OUT2:   data_dac_b              line 240/241             //
+//                                                                                    //
+////////////////////////////////////////////////////////////////////////////////////////
 
 
 endmodule
