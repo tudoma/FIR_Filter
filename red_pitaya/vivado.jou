@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2013.3 (64-bit)
+# SW Build 329390 on Wed Oct 16 18:37:02 MDT 2013
+# IP Build 192953 on Wed Oct 16 08:44:02 MDT 2013
+# Start of session at: Mon Nov 07 10:59:06 2016
+# Process ID: 1664
+# Log file: C:/Github/FIR_Filter/red_pitaya/vivado.log
+# Journal file: C:/Github/FIR_Filter/red_pitaya\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:\Github\FIR_Filter\red_pitaya\red_pitaya.xpr}
+update_compile_order -fileset sources_1

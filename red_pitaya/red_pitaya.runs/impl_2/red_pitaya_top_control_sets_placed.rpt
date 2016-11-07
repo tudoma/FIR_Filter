@@ -1,0 +1,79 @@
+Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2013.3 (win64) Build 329390 Wed Oct 16 18:37:02 MDT 2013
+| Date         : Mon Nov 07 11:02:58 2016
+| Host         : AGBSma04 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file red_pitaya_top_control_sets_placed.rpt
+| Design       : red_pitaya_top
+| Device       : xc7z010
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    26 |
+| Minimum Number of register sites lost to control set restrictions |    87 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              13 |            7 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              20 |           12 |
+| Yes          | No                    | No                     |             207 |           65 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             113 |           48 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------------------------+----------------------------------------------------------------+------------------------------------------+------------------+----------------+
+|                         Clock Signal                        |                          Enable Signal                         |             Set/Reset Signal             | Slice Load Count | Bel Load Count |
++-------------------------------------------------------------+----------------------------------------------------------------+------------------------------------------+------------------+----------------+
+|  i_analog/dac_clk                                           |                                                                |                                          |                1 |              1 |
+|  i_analog/CLK                                               |                                                                |                                          |                1 |              1 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 | i_ps/system_i/system_i/processing_system7_0/inst/FCLK_RESET0_N | i_ps/i_gp0_slave/n_6_axi_rdata_o[31]_i_1 |                1 |              7 |
+|  i_analog/dac_2clk                                          | i_analog/n_6_dac_pwm[3]_i_1                                    |                                          |                1 |              8 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 | i_ps/i_gp0_slave/E[0]                                          | i_ps/system_i/O12                        |                6 |              8 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 | i_ps/i_gp0_slave/I22[0]                                        | i_ps/system_i/O12                        |                7 |              8 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 | i_ps/i_gp0_slave/I24[0]                                        | i_ps/system_i/O12                        |                5 |              8 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 | i_ps/i_gp0_slave/I23[0]                                        | i_ps/system_i/O12                        |                6 |              8 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 | i_ps/i_gp0_slave/I25[0]                                        | i_ps/system_i/O12                        |                7 |              8 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 | i_ps/system_i/O11[0]                                           |                                          |                4 |              8 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 |                                                                | i_ps/system_i/O12                        |                5 |              8 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 | i_hk/sel                                                       | i_ps/system_i/O12                        |                3 |              9 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 |                                                                |                                          |                5 |             11 |
+|  i_analog/CLK                                               | i_analog/n_6_adc_v_r[11]_i_1                                   |                                          |                5 |             12 |
+|  i_analog/CLK                                               | i_analog/n_6_adc_temp_r[11]_i_1                                |                                          |                5 |             12 |
+|  i_analog/CLK                                               | i_analog/n_6_adc_pint_r[11]_i_1                                |                                          |                5 |             12 |
+|  i_analog/CLK                                               | i_analog/n_6_adc_paux_r[11]_i_1                                |                                          |                3 |             12 |
+|  i_analog/CLK                                               | i_analog/n_6_adc_bram_r[11]_i_1                                |                                          |                3 |             12 |
+|  i_analog/CLK                                               | i_analog/n_6_adc_int_r[11]_i_1                                 |                                          |                2 |             12 |
+|  i_analog/CLK                                               | i_analog/n_6_adc_aux_r[11]_i_1                                 |                                          |                2 |             12 |
+|  i_analog/CLK                                               | i_analog/n_6_adc_ddr_r[11]_i_1                                 |                                          |                4 |             12 |
+|  i_analog/dac_2clk                                          |                                                                | i_analog/dac_rst                         |                7 |             12 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 | i_ps/system_i/system_i/processing_system7_0/inst/FCLK_RESET0_N |                                          |               11 |             25 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 | i_ps/system_i/O9[0]                                            |                                          |               10 |             35 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 | i_ps/system_i/O10[0]                                           |                                          |               10 |             35 |
+|  i_ps/system_i/system_i/processing_system7_0/inst/FCLK_CLK0 | i_hk/n_6_dna_value[56]_i_1                                     | i_ps/system_i/O12                        |               13 |             57 |
++-------------------------------------------------------------+----------------------------------------------------------------+------------------------------------------+------------------+----------------+
+
+

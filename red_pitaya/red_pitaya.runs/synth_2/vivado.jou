@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2013.3 (64-bit)
+# SW Build 329390 on Wed Oct 16 18:37:02 MDT 2013
+# IP Build 192953 on Wed Oct 16 08:44:02 MDT 2013
+# Start of session at: Mon Nov 07 11:01:59 2016
+# Process ID: 3752
+# Log file: C:/Github/FIR_Filter/red_pitaya/red_pitaya.runs/synth_2/red_pitaya_top.rds
+# Journal file: C:/Github/FIR_Filter/red_pitaya/red_pitaya.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source red_pitaya_top.tcl
