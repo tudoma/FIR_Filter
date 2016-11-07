@@ -450,5 +450,16 @@ red_pitaya_daisy i_daisy
 ////////////////////////////////////////////////////////////////////////////////////////
 
 
+FIR_filter
+          (
+          .clk(adc_clk),
+          .reset(1'b0),
+          .clk_enable(1'b1),
+          .In(data_adc_a),
+          .ce_out(),
+          .Out(data_dac_a)
+          );
+          
+          
 endmodule
 
